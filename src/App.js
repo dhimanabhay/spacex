@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+// import { motion } from "framer-motion";
+import "./App.css";
+import Home from "./Home";
+import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Rocket from "./components/Rocket"; // Assuming you have a RocketList component
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="w-full font-nunito bg-black">
+        <Navbar />
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/rockets" element={<Rocket />} />
+          {/* Add more Route components for other pages if needed */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
