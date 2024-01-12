@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     fontFamily: {
       nunito: ['Nunito Sans'],
+      mono: ['mono']
     },
     extend: {},
   },
