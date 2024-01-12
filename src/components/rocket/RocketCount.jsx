@@ -13,6 +13,13 @@ export default function RocketCount({ id, rocket_count_data }) {
   });
 
   const controls = useAnimation();
+  useEffect(() => {
+    setCount({
+      launch: 0,
+      land: 0,
+      reflight: 0,
+    });
+  }, [selectedRocket.id])
 
   useEffect(() => {
     if (inView) {
@@ -43,7 +50,7 @@ export default function RocketCount({ id, rocket_count_data }) {
 
       return () => clearInterval(interval);
     }
-    else {
+    if(!inView) {
 
       setTimeout(() => {
         setCount({
@@ -54,18 +61,18 @@ export default function RocketCount({ id, rocket_count_data }) {
       }, 500);
     }
 
-  }, [selectedRocket,count.land, count.launch, count.reflight, inView]);
+  }, [selectedRocket, count.land, count.launch, count.reflight, inView]);
 
   if (selectedRocket.launch === "0") {
     return null;
   }
   
   return (
-    <div  className="w-full flex items-center justify-center">
+    <div  className="w-full flex items-center py-20 justify-center">
       <motion.div animate={controls} className="flex items-center justify-center w-1/2 gap-20">
         <div className="flex flex-col items-center">
-          <p className="text-[7rem] ">{count.launch}</p>
-          <p ref={ref}  className="pb-10 -mt-5">TOTAL LAUNCHES</p>
+          <p  className="text-[7rem] ">{count.launch}</p>
+          <p ref={ref} className="pb-10 -mt-5">TOTAL LAUNCHES</p>
         </div>
         <div className="flex flex-col items-center">
           <p className="text-[7rem]" >{count.land}</p>

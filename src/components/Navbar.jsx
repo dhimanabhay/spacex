@@ -49,8 +49,8 @@ export default function Navbar() {
   return (
     <nav id="navbar" className=" flex flex-col fixed w-full ">
       <div
-        className={` transition duration:600 flex flex-row justify-between h-[60px] items-center px-10 bg-transparent text-white font-nunito ${
-          isTop ? "bg-transparent" : ""
+        className={` transition duration:600 flex flex-row justify-between h-[60px] items-center px-10 text-white font-nunito ${
+          isTop ? "bg-transparent" : "backdrop-blur-sm"
         }`}
       >
         <svg
