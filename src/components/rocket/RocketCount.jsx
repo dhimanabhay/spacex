@@ -2,7 +2,34 @@ import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 
-export default function RocketCount({ id, rocket_count_data }) {
+const rocket_count_data = [
+  {
+    id: "falcon9",
+    launch: "287",
+    land: "245",
+    reflight: "219",
+  },
+  {
+    id: "falconheavy",
+    launch: "9",
+    land: "17",
+    reflight: "14",
+  },
+  {
+    id: "dragon",
+    launch: "43",
+    land: "39",
+    reflight: "22",
+  },
+  {
+    id: "starship",
+    launch: "0",
+    land: "0",
+    reflight: "0",
+  },
+];
+
+export default function RocketCount({ id }) {
   const selectedRocket = rocket_count_data.find((rocket) => rocket.id === id);
   const [ref, inView] = useInView();
 

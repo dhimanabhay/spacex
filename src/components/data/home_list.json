@@ -1,0 +1,26 @@
+[
+    {
+        "img": "../home/home_1.jpg",
+        "subTitle": "UPCOMING LAUNCH",
+        "title": "STARLINK MISSION",
+        "btnText": "WATCH"
+    },
+    {
+        "img": "../home/home_2.jpg",
+        "subTitle": "RECENT LAUNCH",
+        "title": "STARLINK MISSION",
+        "btnText": "REWATCH"
+    },
+    {
+        "img": "../home/home_3.jpg",
+        "subTitle": "RECENT LAUNCH",
+        "title": "OVZON 3 MISSION",
+        "btnText": "REWATCH"
+    },
+    {
+        "img": "../home/home_4.mp4",
+        "subTitle": "RECENT LAUNCH",
+        "title": "STARSHIP SECOND TEST",
+        "btnText": "LEARN MORE"
+    }
+]

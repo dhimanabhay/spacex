@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-export default function HomeComponent({ data }) {
+export default function HomeComponent({ key, data }) {
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
-
   const divStyle = {
     backgroundImage: `url(${data.img})`,
     backgroundSize: "cover",

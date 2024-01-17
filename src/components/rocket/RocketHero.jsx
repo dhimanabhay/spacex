@@ -1,8 +1,40 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 
+//home photos
+import falcon9_home from "./falcon9/falcon9_home.jpg";
+import falconheavy_home from "./falconheavy/falconheavy_home.jpg";
+import dragon_home from "./dragon/dragon_home.jpg";
+import starship_home from "./starship/starship_home.jpg";
 
-export default function RocketHero({ id, rocket_data }) {
+const rocket_data = [
+  {
+    id: "falcon9",
+    name: "falcon 9",
+    description: "first orbital class rocket capable of reflight",
+    img_home: falcon9_home,
+  },
+  {
+    id: "falconheavy",
+    name: "falcon heavy",
+    description: "over 5 million lbs of thrust",
+    img_home: falconheavy_home,
+  },
+  {
+    id: "dragon",
+    name: "dragon",
+    description: "sending humans and cargo into space",
+    img_home: dragon_home,
+  },
+  {
+    id: "starship",
+    name: "starship",
+    description: "service to earth orbit, moon, mars and beyond",
+    img_home: starship_home,
+  },
+];
+
+export default function RocketHero({ id }) {
   const selectedRocket = rocket_data.find((rocket) => rocket.id === id);
   const controls = useAnimation();
 
