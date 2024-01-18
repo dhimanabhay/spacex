@@ -7,6 +7,7 @@ import dragon_skeleton from "./dragon/dragon_skeleton.jpg";
 import dragon_cr1 from "./dragon/dragon_cr1.jpg";
 import starship_skeleton from "./starship/starship_skeleton.jpg";
 import starship_cr1 from "./starship/starship_cr1.jpg";
+import f9_vid from "./falcon9/f9.mp4";
 
 const rocket_intro_data = [
   {
@@ -32,7 +33,8 @@ const rocket_intro_data = [
   },
   {
     id: "starship",
-    description: "SpaceX’s Starship spacecraft and Super Heavy rocket – collectively referred to as Starship – represent a fully reusable transportation system designed to carry both crew and cargo to Earth orbit, the Moon, Mars and beyond. Starship is the world’s most powerful launch vehicle ever developed, capable of carrying up to 150 metric tonnes fully reusable and 250 metric tonnes expendable.",
+    description:
+      "SpaceX’s Starship spacecraft and Super Heavy rocket – collectively referred to as Starship – represent a fully reusable transportation system designed to carry both crew and cargo to Earth orbit, the Moon, Mars and beyond. Starship is the world’s most powerful launch vehicle ever developed, capable of carrying up to 150 metric tonnes fully reusable and 250 metric tonnes expendable.",
     img_skeleton: starship_skeleton,
     img_cr1: starship_cr1,
   },
@@ -81,12 +83,14 @@ export default function RocketIntro({ id }) {
   const selectedRocket = rocket_intro_data.find((rocket) => rocket.id === id);
   const selected_cr_Rocket = rocket_cr_data.find((rocket) => rocket.id === id);
   const [ref, inView] = useInView();
+  const [vidref, invidView] = useInView();
 
   const divStyle = {
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundAttachment: "fixed",
-    transition: "background-image 0.5s ease-in-out",
+    transition: "background-image 0.5s ease-in",
+    backgroundImage: !inView ?  `url(${selectedRocket.img_skeleton})` : "",
     ...(inView
       ? { backgroundImage: `url(${selectedRocket.img_cr1})` }
       : { backgroundImage: `url(${selectedRocket.img_skeleton})` }),
@@ -99,6 +103,15 @@ export default function RocketIntro({ id }) {
 
   return (
     <div className="min-h-screen" style={divStyle}>
+      {invidView&& (
+        <video
+        src={f9_vid}
+        autoPlay
+        loop
+        muted
+        className="h-1/2 w-full object-cover absolute bottom-0"
+        ></video>
+      )}
       <div className="flex flex-col justify-center w-1/3 h-screen pl-20 text-sm">
         <div className="flex flex-col justify-center h-full">
           {selectedRocket.description}
@@ -126,6 +139,7 @@ export default function RocketIntro({ id }) {
                     </tr>
                   )
                 )}
+                <div ref={vidref}></div>
               </tbody>
             </table>
           </div>

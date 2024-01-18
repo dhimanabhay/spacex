@@ -37,7 +37,9 @@ export default function Navbar() {
       setIsTop(false);
     }
   };
-
+  const toTop = () => {
+    window.scrollTo(0,0);
+  }
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
 
@@ -53,6 +55,7 @@ export default function Navbar() {
           isTop ? "bg-transparent" : "backdrop-blur-sm"
         }`}
       >
+        <Link onClick={toTop} to={{pathname:`/`}} >
         <svg
           className="pb-2 h-[30px]"
           version="1.1"
@@ -119,6 +122,7 @@ export default function Navbar() {
             ></path>
           </g>
         </svg>
+        </Link>
         <div className="flex items-center gap-6 uppercase text-xs">
           {link_data.map((link) => (
             <div className=" relative overflow-hidden" key={link.name}>
@@ -129,7 +133,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="flex justify-end w-[208px]">menu</div>
+        <div className="w-[208px]"></div>
       </div>
     </nav>
   );

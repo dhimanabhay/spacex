@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Rocket from "./components/Rocket";
 import Page404 from "./components/Page404";
+import Foot from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/Rocket/:rocketType" element={<Rocket />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
+        <Foot/>
       </div>
     </Router>
 

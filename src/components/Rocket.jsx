@@ -1,12 +1,11 @@
 import { useParams, useLocation } from "react-router-dom";
-
-//files import
 import RocketHero from "./rocket/RocketHero";
 import RocketCount from "./rocket/RocketCount";
 import RocketIntro from "./rocket/RocketIntro";
 import { useEffect } from "react";
 import RocketVideo from "./rocket/RocketVideo";
 import RocketEngine from "./rocket/RocketEngine";
+import RocketSlider from "./rocket/RocketSlider";
 
 export default function Rocket() {
   const { rocketType } = useParams();
@@ -23,6 +22,7 @@ export default function Rocket() {
         <RocketIntro id={rocketType} />
         <RocketVideo id={rocketType} />
         <RocketEngine id={rocketType} />
+        <RocketSlider id={rocketType} />
     </div>
   );
 }

@@ -18,8 +18,8 @@ const rocket_engine_data = [
         "Merlin is a family of rocket engines developed by SpaceX for use on its Falcon 1, Falcon 9 and Falcon Heavy launch vehicles. Merlin engines use a rocket grade kerosene (RP-1) and liquid oxygen as rocket propellants in a gas-generator power cycle. The Merlin engine was originally designed for recovery and reuse.",
       img: falcon9_first,
       table: {
-        propellant: "lox",
-        thrust: "845 kn",
+        propellant: "LOX",
+        thrust: "845 kN",
       },
     },
     second: {
@@ -27,7 +27,7 @@ const rocket_engine_data = [
       description:
         "Merlin Vacuum features a larger exhaust section and a significantly larger expansion nozzle to maximize the engine’s efficiency in the vacuum of space. Its combustion chamber is regeneratively cooled, while the expansion nozzle is radiatively cooled. At full power, the Merlin Vacuum engine operates with the greatest efficiency ever for an American-made hydrocarbon rocket engine.",
       img: falcon9_second,
-      table: { propellant: "lox", thrust: "981 kn" },
+      table: { propellant: "LOX", thrust: "981 kN" },
     },
   },
 
@@ -39,14 +39,14 @@ const rocket_engine_data = [
       img: falconheavy_first,
       description:
         "Merlin is a family of rocket engines developed by SpaceX for use on its Falcon 1, Falcon 9 and Falcon Heavy launch vehicles. Merlin engines use a rocket grade kerosene (RP-1) and liquid oxygen as rocket propellants in a gas-generator power cycle. The Merlin engine was originally designed for recovery and reuse.",
-      table: { propellant: "lox", thrust: "845 kn" },
+      table: { propellant: "LOX", thrust: "845 kN" },
     },
     second: {
       name: "vaccuum",
       img: falconheavy_second,
       description:
         "Merlin Vacuum features a larger exhaust section and a significantly larger expansion nozzle to maximize the engine’s efficiency in the vacuum of space. Its combustion chamber is regeneratively cooled, while the expansion nozzle is radiatively cooled. At full power, the Merlin Vacuum engine operates with the greatest efficiency ever for an American-made hydrocarbon rocket engine.",
-      table: { propellant: "lox", thrust: "981 kn" },
+      table: { propellant: "LOX", thrust: "981 kN" },
     },
   },
 
@@ -130,8 +130,9 @@ export default function RocketEngine({ id }) {
             <div className="flex gap-3 py-10 text-xs uppercase ">
               <p
                 style={{
-                  fontSize:
-                    selectedType === selectedRocket.first ? "1rem" : "0.8rem",
+                  // fontSize:
+                    // selectedType === selectedRocket.first ? "1rem" : "0.8rem",
+                    borderBottom: selectedType === selectedRocket.first ? "1px solid white" : "",
                   color:
                     selectedType === selectedRocket.first
                       ? "white"
@@ -145,8 +146,9 @@ export default function RocketEngine({ id }) {
               <p className="text-gray-500">|</p>
               <p
                 style={{
-                  fontSize:
-                    selectedType === selectedRocket.second ? "1rem" : "0.8rem",
+                  // fontSize:
+                    // selectedType === selectedRocket.second ? "1rem" : "0.8rem",
+                    borderBottom: selectedType === selectedRocket.second ? "1px solid white" : "",
                   color:
                     selectedType === selectedRocket.second
                       ? "white"

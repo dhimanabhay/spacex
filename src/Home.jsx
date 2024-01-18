@@ -6,24 +6,28 @@ import home4 from './components/home/home_4.mp4'
 
 const home_list = [
     {
+        id: 1,
         img: home1,
         subTitle: "UPCOMING LAUNCH",
-        title: "STARLINK MISSION",
+        title: "AX-3 MISSION",
         btnText: "WATCH",
     },
     {
+        id: 2,
         img: home2,
         subTitle: "RECENT LAUNCH",
         title: "STARLINK MISSION",
         btnText: "REWATCH",
     },
     {
+        id: 3,
         img: home3,
         subTitle: "RECENT LAUNCH",
         title: "OVZON 3 MISSION",
         btnText: "REWATCH",
     },
     {
+        id: 4,
         img: home4,
         subTitle: "RECENT LAUNCH",
         title: "STARSHIP SECOND TEST",
