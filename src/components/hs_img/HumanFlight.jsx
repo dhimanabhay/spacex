@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import cr1 from "./hs_img/hs_cr1.jpg";
-import cr2 from "./hs_img/hs_cr2.jpg";
-import cr3 from "./hs_img/hs_cr3.jpg";
-import cr4 from "./hs_img/hs_cr4.jpg";
-import hs_home from "./hs_img/hs_home.jpg";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import cr1 from "./hs_cr1.jpg";
+import cr2 from "./hs_cr2.jpg";
+import cr3 from "./hs_cr3.jpg";
+import cr4 from "./hs_cr4.jpg";
+import hs_home from "./hs_home.jpg";
 
 const rocket_slider_data = [
   {
@@ -42,13 +42,13 @@ export default function HumanFlight() {
     (rocket) => rocket.id === "humanflight"
   );
   const [curr, setCurr] = useState(0);
-  const slides = selectedRocket.table;
+  // const slides = selectedRocket.table;
   const prev = () =>
     setCurr((curr) => (curr === 0 ? selectedRocket.table.length - 1 : curr - 1));
   const next = () =>
     setCurr((curr) => (curr === selectedRocket.table.length - 1 ? 0 : curr + 1));
 
-  const controls = useAnimation();
+  // const controls = useAnimation();
 
   const divStyle = {
     backgroundImage: `url(${selectedRocket.img_home})`,

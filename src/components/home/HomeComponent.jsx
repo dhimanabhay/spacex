@@ -37,10 +37,10 @@ export default function HomeComponent({ key, data }) {
             >
               <div className="text-sm">{data.subTitle}</div>
               <h1 className="text-4xl font-bold">{data.title}</h1>
-              <div>
-                <button className="border-2 mt-4 py-2 px-6 border-white">
+              <div className=" py-4">
+                <a href={data.link} target="_blank" rel="noreferrer"  className="border-2 mt-4 py-2 px-6 border-white">
                   {data.btnText}
-                </button>
+                </a>
               </div>
             </motion.div>
           </div>
@@ -57,10 +57,10 @@ export default function HomeComponent({ key, data }) {
           >
             <div className="text-sm">{data.subTitle}</div>
             <h1 className="text-4xl font-bold">{data.title}</h1>
-            <div>
-              <button className="border-2 mt-4 py-2 px-6 border-white">
+            <div className=" py-4">
+              <a href={data.link} target="_blank" rel="noreferrer" className="cursor-pointer border-2 mt-4 py-2 px-6 border-white">
                 {data.btnText}
-              </button>
+              </a>
             </div>
           </motion.div>
         </div>

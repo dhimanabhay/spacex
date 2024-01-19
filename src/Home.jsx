@@ -8,9 +8,10 @@ const home_list = [
     {
         id: 1,
         img: home1,
-        subTitle: "UPCOMING LAUNCH",
+        subTitle: "CURRENT MISSION",
         title: "AX-3 MISSION",
-        btnText: "WATCH",
+        btnText: "REWATCH",
+        link: "https://www.youtube.com/live/1nXlbgjIoP4?si=7NvmOJAUpITVzbrQ",
     },
     {
         id: 2,
@@ -18,6 +19,7 @@ const home_list = [
         subTitle: "RECENT LAUNCH",
         title: "STARLINK MISSION",
         btnText: "REWATCH",
+        link: "https://youtu.be/AdxtHqN88LM?si=PvRd79Ay4LdvCw_P",
     },
     {
         id: 3,
@@ -25,6 +27,7 @@ const home_list = [
         subTitle: "RECENT LAUNCH",
         title: "OVZON 3 MISSION",
         btnText: "REWATCH",
+        link: "https://www.youtube.com/live/7I90uPUb7eI?si=-t_d4cPHdLphNktk",
     },
     {
         id: 4,
@@ -32,6 +35,7 @@ const home_list = [
         subTitle: "RECENT LAUNCH",
         title: "STARSHIP SECOND TEST",
         btnText: "LEARN MORE",
+        link: "https://youtu.be/sSgozq8B-7A?si=-oYLJPTqLaRrgK5b",
     },
 ]
 
