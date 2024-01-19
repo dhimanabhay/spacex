@@ -6,6 +6,7 @@ import falcon9_home from "./falcon9/falcon9_home.jpg";
 import falconheavy_home from "./falconheavy/falconheavy_home.jpg";
 import dragon_home from "./dragon/dragon_home.jpg";
 import starship_home from "./starship/starship_home.jpg";
+import hs_home from "../hs_img/hs_home.jpg"
 
 const rocket_data = [
   {
@@ -31,6 +32,12 @@ const rocket_data = [
     name: "starship",
     description: "service to earth orbit, moon, mars and beyond",
     img_home: starship_home,
+  },
+  {
+    id: "humanflight",
+    name: "human spaceflight",
+    description: "Making life multiplanetary",
+    img_home: hs_home,
   },
 ];
 
